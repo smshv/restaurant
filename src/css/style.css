@@ -7,14 +7,15 @@ body{
     height: 100vh;
 }
 .content{
-    background-image: url("../images/background.jpg");
+    /*background-image: url("../images/background.jpg");
     background-size: cover;
-    background-position: 0 70%;
+    background-position: 0 70%;*/
     height: 100%;
     display: grid;
     grid-template-rows: 80px 1fr 40px;
 }
 .header{
+    background-color: #1e1b4b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +38,9 @@ li:hover{
     cursor: pointer;
 }
 .main-body{
+    background-image: url("../images/background.jpg");
+    background-color: transparent;
+    background-position: 0px -160px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,8 +51,13 @@ li:hover{
     font-size: 96px;
     text-align: center;
     color: #c59d5f;
+}
+#title{
     position: relative;
     top: 68px;
+}
+.menu-title #title{
+    z-index: -1;
 }
 h1{
     color: white;
@@ -57,6 +66,9 @@ h1{
     font-weight: bold;
     text-transform: uppercase;
     z-index: 1;
+}
+.menu-title h1{
+    color: black;
 }
 .msg{
     color: white;
@@ -79,7 +91,32 @@ button{
 button:hover{
     color: white;
 }
+.dish-title{
+    color:#c59d5f;
+    font-size: 40px;
+}
+.menu-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#menu-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-card{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .footer{
+    background-color: #1e1b4b;
     border-top: 2px solid #c59d5f;
     display: flex;
     justify-content: center;
